@@ -54,7 +54,7 @@ const AboutUs = () => {
               <p className="desc">
                 At{" "}
                 <span className="font-semibold text-primary">
-                  SiliconX technologies
+                  SysNxt Technologies
                 </span>
                 , we bring your digital ideas to life. Whether you're a growing
                 startup or an established enterprise, our dedicated team of

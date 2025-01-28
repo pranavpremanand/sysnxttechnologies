@@ -79,7 +79,7 @@ const ContactForm = () => {
             Get In Touch With Us!
           </h2>
           <p data-aos="fade-up" className="desc text-center max-w-[60rem]">
-            Let SiliconX technologies be the catalyst for your digital
+            Let SysNxt Technologies be the catalyst for your digital
             transformation. Together, we can build solutions that are as dynamic
             as your vision, helping your business reach new heights.
           </p>

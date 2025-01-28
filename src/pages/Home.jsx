@@ -54,7 +54,7 @@ const Home = () => {
           <p className="sub-heading">
             Welcome to{" "}
             <span className="text-primary font-semibold block sm:inline">
-              SiliconX technologies
+              SysNxt Technologies
             </span>
           </p>
           <h1 className="heading capitalize">
@@ -153,7 +153,7 @@ const Home = () => {
                 <p className="desc">
                   At{" "}
                   <span className="font-medium text-primary">
-                    SiliconX technologies
+                    SysNxt Technologies
                   </span>
                   , we are committed to delivering cutting-edge IT solutions
                   tailored to meet the unique needs of our clients. Our team of

@@ -24,7 +24,7 @@ const WebsiteFooter = () => {
             width="200"
             height="50"
             src={logoImg}
-            className="w-[14rem] object-contain"
+            className="w-[16rem] object-contain"
             alt="logo"
           />
           <p className="desc text-sm max-w-[22rem] mt-3">

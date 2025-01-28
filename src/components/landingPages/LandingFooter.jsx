@@ -23,7 +23,7 @@ const LandingFooter = () => {
             width="200"
             height="50"
             src={logoImg}
-            className="w-[14rem] object-contain"
+            className="w-[16rem] object-contain"
             alt="logo"
           />
           <div className="flex items-center gap-3 mt-5">
