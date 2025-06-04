@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import SubHeading from "../SubHeading";
+import bgImg from "../../assets/images/aboutus-img31.webp";
 import { SpinnerContext } from "../SpinnerContext";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
@@ -66,121 +67,132 @@ const ContactForm = () => {
   return (
     <div
       id="contact"
-      className="py-[5rem] bg-secondary/5 bg-[100%_40%] relative min-h-[40rem] flex items-center"
+      className="py-[5rem] bg-secondary/5 bg-cover bg-[100%_40%] relative min-h-[40rem] flex items-center"
+      style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="absolute top-0 w-full h-full bg-background/70"></div>
+      <div className="absolute top-0 w-full h-full bg-gradient-to-b from-background via-background/60 to-background"></div>
       <div className="wrapper relative z-10 w-full">
-        <div className="flex flex-col items-center gap-5">
-          <SubHeading heading="Contact Us" />
-          <h2
-            data-aos="fade-up"
-            className="heading-2 max-w-[60rem] mx-auto font-light text-center"
-          >
-            Get In Touch With Us!
-          </h2>
-          <p data-aos="fade-up" className="desc text-center max-w-[60rem]">
-            Let SysNxt Technologies be the catalyst for your digital
-            transformation. Together, we can build solutions that are as dynamic
-            as your vision, helping your business reach new heights.
-          </p>
+        <div className="">
+          <div className="grid sm:grid-cols-2 gap-10 text-start">
+            <div
+              className="flex flex-col items-start gap-5"
+            >
+              <SubHeading heading="Contact Us" />
+              <h2
+                data-aos="fade-up"
+                className="heading-2 max-w-[60rem] font-light"
+              >
+                Get In Touch With Us!
+              </h2>
+              <p data-aos="fade-up" className="max-w-[60rem]">
+                Let Quantum Code Solutions be the catalyst for your digital
+                transformation. Together, we can build solutions that are as
+                dynamic as your vision, helping your business reach new heights.
+              </p>
+            </div>
+            <form
+              onSubmit={handleSubmit(handleFormSubmit)}
+              data-aos="fade-up"
+              className="flex flex-col max-w-xl w-full mx-auto gap-4 mt-7"
+            >
+              <div className="flex flex-col gap-1">
+                <input
+                  type="text"
+                  placeholder="Name"
+                  className="outline-none border-secondary border bg-background/80 p-2 rounded-lg shadow-large shadow-secondary/5"
+                  {...register("name", {
+                    required: "Full name is required",
+                    validate: (val) => {
+                      if (val.trim() !== "") {
+                        return true;
+                      } else {
+                        return "Full name is required";
+                      }
+                    },
+                  })}
+                />
+                <small className="error-message">{errors.name?.message}</small>
+              </div>
+              <div className="flex flex-col gap-1">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="outline-none border-secondary border bg-background/80 p-2 rounded-lg shadow-large shadow-secondary/5"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
+                      message: "Entered email is invalid",
+                    },
+                  })}
+                />
+                <small className="error-message">{errors.email?.message}</small>
+              </div>
+              <div className="flex flex-col gap-1">
+                <input
+                  type="tel"
+                  placeholder="Phone Number"
+                  className="outline-none border-secondary border bg-background/80 p-2 rounded-lg shadow-large shadow-secondary/5"
+                  {...register("phone", {
+                    required: "Phone number is required",
+                    pattern: {
+                      value: /^\+?[0-9]{10,15}$/,
+                      message: "Entered phone number is invalid",
+                    },
+                  })}
+                />
+                <small className="error-message">{errors.phone?.message}</small>
+              </div>
+              <div className="flex flex-col gap-1">
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  className="outline-none border-secondary border bg-background/80 p-2 rounded-lg shadow-large shadow-secondary/5"
+                  {...register("subject", {
+                    required: "Subject is required",
+                    validate: (val) => {
+                      if (val.trim() !== "") {
+                        return true;
+                      } else {
+                        return "Subject is required";
+                      }
+                    },
+                  })}
+                />
+                <small className="error-message">
+                  {errors.subject?.message}
+                </small>
+              </div>
+              <div className="flex flex-col gap-1">
+                <textarea
+                  rows="3"
+                  placeholder="Message"
+                  className="outline-none border-secondary border bg-background/80 p-2 rounded-lg shadow-large shadow-secondary/5"
+                  {...register("message", {
+                    required: "Message is required",
+                    validate: (val) => {
+                      if (val.trim() !== "") {
+                        return true;
+                      } else {
+                        return "Message is required";
+                      }
+                    },
+                  })}
+                />
+                <small className="error-message">
+                  {errors.message?.message}
+                </small>
+              </div>
+              <button
+                disabled={isSubmitting}
+                type="button"
+                className="secondary-btn mt-2"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-        <form
-          onSubmit={handleSubmit(handleFormSubmit)}
-          data-aos="fade-up"
-          className="flex flex-col max-w-xl mx-auto gap-4 mt-7"
-        >
-          <div className="flex flex-col gap-1">
-            <input
-              type="text"
-              placeholder="Name"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("name", {
-                required: "Full name is required",
-                validate: (val) => {
-                  if (val.trim() !== "") {
-                    return true;
-                  } else {
-                    return "Full name is required";
-                  }
-                },
-              })}
-            />
-            <small className="error-message">{errors.name?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <input
-              type="email"
-              placeholder="Email"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("email", {
-                required: "Email is required",
-                pattern: {
-                  value: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
-                  message: "Entered email is invalid",
-                },
-              })}
-            />
-            <small className="error-message">{errors.email?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <input
-              type="tel"
-              placeholder="Phone Number"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("phone", {
-                required: "Phone number is required",
-                pattern: {
-                  value: /^[6-9]\d{9}$/i,
-                  message: "Entered phone number is invalid",
-                },
-              })}
-            />
-            <small className="error-message">{errors.phone?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <input
-              type="text"
-              placeholder="Subject"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("subject", {
-                required: "Subject is required",
-                validate: (val) => {
-                  if (val.trim() !== "") {
-                    return true;
-                  } else {
-                    return "Subject is required";
-                  }
-                },
-              })}
-            />
-            <small className="error-message">{errors.subject?.message}</small>
-          </div>
-          <div className="flex flex-col gap-1">
-            <textarea
-              rows="3"
-              placeholder="Message"
-              className="outline-none border-secondary border bg-background/80 p-2 rounded-sm shadow-large shadow-secondary/5"
-              {...register("message", {
-                required: "Message is required",
-                validate: (val) => {
-                  if (val.trim() !== "") {
-                    return true;
-                  } else {
-                    return "Message is required";
-                  }
-                },
-              })}
-            />
-            <small className="error-message">{errors.message?.message}</small>
-          </div>
-          <button
-            disabled={isSubmitting}
-            type="button"
-            className="secondary-btn mt-2"
-          >
-            Send Message
-          </button>
-        </form>
       </div>
     </div>
   );

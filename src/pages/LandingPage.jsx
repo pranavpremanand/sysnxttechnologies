@@ -6,6 +6,7 @@ import { appDevelopmentServices, webDevelopmentServices } from "../constant";
 import TrustWorthySection from "../components/TrustWorthySection";
 import appDevAboutImg from "../assets/images/landingpage/app-dev-about.jpg";
 import webDevAboutImg from "../assets/images/landingpage/web-dev-about.jpg";
+import LeadForm from "../components/LeadForm";
 
 const LandingHeader = lazy(() =>
   import("../components/landingPages/LandingHeader")
@@ -71,6 +72,7 @@ const LandingPage = ({ page }) => {
           </p>
         </div>
       </section>
+      <ContactForm />
       <section id="about" className="text-primary_text wrapper pt-[3rem]">
         <div className="grid lg:grid-cols-2 gap-10 mt-7">
           <div data-aos="fade-up" className="hidden lg:block h-full">
@@ -158,7 +160,7 @@ const LandingPage = ({ page }) => {
       <ConnectWithUs />
       <Testimonials />
       <JoinHappyCustomers />
-      <ContactForm />
+      <LeadForm />
       <LandingFooter />
     </>
   );
