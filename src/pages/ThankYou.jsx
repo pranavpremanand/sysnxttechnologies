@@ -8,14 +8,13 @@ import {
   Mail,
   MapPin,
   Phone,
-  Twitter,
 } from "lucide-react";
 
 const ThankYou = () => {
   return (
     <>
       <div className="h-[calc(100vh-18rem)] flex flex-col items-center justify-center">
-        <div className="py-4 sticky top-0 w-full bg-secondary/60 backdrop-blur-md z-50 text-primary_text">
+        <div className="py-4 sticky top-0 w-full bg-white/60 backdrop-blur-md z-50 text-primary_text">
           <div className="wrapper flex justify-between items-center gap-10">
             <div className="flex justify-between items-center gap-20 w-full pl-[1rem] lg:pl-0">
               <Link smooth={true} to="/" className="cursor-pointer">
@@ -24,7 +23,7 @@ const ThankYou = () => {
                   src={logoImg}
                   width={150}
                   height={150}
-                  className="h-[3rem] md:h-[3.75rem] scale-125"
+                  className="w-[10rem] md:w-[12rem] scale-125 object-contain"
                   alt="logo"
                 />
               </Link>
@@ -33,7 +32,7 @@ const ThankYou = () => {
         </div>
         <div className="wrapper flex flex-col items-center justify-center h-full">
           <h1 className="heading-1">Thank You</h1>
-          <p className="text-center text-gray-200 text-sm md:text-base text-balance">
+          <p className="text-center text-sm md:text-base text-balance">
             Thanks for contacting us, one of our associates will get in touch
             with you soon!
           </p>
@@ -67,12 +66,6 @@ const ThankYou = () => {
                 className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
               >
                 <Instagram strokeWidth={1.5} size={20} />
-              </Link>
-              <Link
-                to={companyDetails.twitter}
-                className="w-[2rem] h-[2rem] rounded-full p-2 bg-[#0788AE] hover:bg-tertiary hover:-translate-y-1 transition-all duration-300 flex justify-center items-center"
-              >
-                <Twitter strokeWidth={1.5} size={20} />
               </Link>
               <Link
                 to={companyDetails.linkedin}

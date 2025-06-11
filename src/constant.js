@@ -32,10 +32,9 @@ export const companyDetails = {
   phone: "+919148264137",
   address:
     "Unit 101, Oxford Towers, 139, HAL Old Airport Rd, Kodihalli, Bengaluru, Karnataka - 560008",
-  email: "abc@xyz.com",
-  linkedin: "",
-  instagram: "",
-  twitter: "",
+  email: "info@sysnxttechnologies.com",
+  linkedin: "https://www.linkedin.com/company/sysnxt-technologies/",
+  instagram: "https://www.instagram.com/sysnxttechnologies/",
 };
 
 export const routes = [
