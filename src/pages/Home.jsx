@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import SubHeading from "../components/SubHeading";
 import { ReactComponent as Icon1 } from "../assets/svgs/services/Web Development.svg";
 import { ReactComponent as Icon2 } from "../assets/svgs/services/UIUX Design.svg";
-import { ReactComponent as Icon3 } from "../assets/svgs/services/E-Commerce Development.svg";
+import { ReactComponent as Icon3 } from "../assets/svgs/services/IT solutions.svg";
 import WorkProcess from "../components/WorkProcess";
 
 const WebsiteHeader = React.lazy(() =>
@@ -104,14 +104,12 @@ const Home = () => {
               height="50"
               className="w-[4rem] h-[4rem] fill-secondary"
             />
-            <p className="text-lg leading-tight font-medium">
-              E-Commerce Development
-            </p>
+            <p className="text-lg leading-tight font-medium">AI Development</p>
           </div>
           <p className="desc">
-            Whether you're a small business or a large-scale online retailer, we
-            deliver custom e-commerce platforms that boost your sales and
-            enhance the shopping experience.
+            We design smart, scalable AI solutions that automate tasks, improve
+            workflows, and empower your business with intelligent
+            decision-making tools.
           </p>
         </div>
       </div>
@@ -148,7 +146,7 @@ const Home = () => {
                   />
                 </div>
                 <h2 className="heading-2 max-w-[60rem]">
-                Turning Visions into Reality
+                  Turning Visions into Reality
                 </h2>
                 <p className="desc">
                   At{" "}
@@ -171,7 +169,7 @@ const Home = () => {
         </div>
       </section>
 
-      <AllServices length={3}/>
+      <AllServices length={3} />
       <TrustWorthySection />
       <WorkProcess />
       <OurValue />
